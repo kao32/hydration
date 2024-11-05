@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydration Reminder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stay Hydrated!</h1>
+        <p>Set your hydration reminders and stay healthy.</p>
+
+        <form id="user-form">
+            <label for="age">Enter your age:</label>
+            <input type="number" id="age" name="age" min="1" required>
+
+            <label for="activity">Select your activity level:</label>
+            <select id="activity" name="activity" required>
+                <option value="low">Low</option>
+                <option value="moderate">Moderate</option>
+                <option value="high">High</option>
+            </select>
+
+            <button type="button" onclick="startReminders()">Start Reminders</button>
+        </form>
+
+        <div id="hydration-goal" class="hidden">
+            <p id="goal-message"></p>
+            <button onclick="stopReminders()">Stop Reminders</button>
+        </div>
+
+        <p id="tip" class="hidden"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
